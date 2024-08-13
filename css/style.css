@@ -1,0 +1,780 @@
+.container {
+  height: 100vh;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.banner-top-animation {
+  opacity: 0;
+  transform: translateY(-100px);
+  /* 텍스트를 위로 100px 이동 */
+  animation: slideIn 1s forwards;
+  animation-delay: 0.5s;
+  /* 원하는 경우 지연 시간 추가 가능 */
+}
+
+/* 햄버거 */
+#hamburger {
+  display: none;
+  width: 20px;
+  height: 10px;
+  z-index: 99999;
+  position: relative;
+}
+
+#hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #262320;
+  transition: 0.3s;
+}
+
+#hamburger span:first-child {
+  top: 0;
+  left: 0;
+}
+
+#hamburger span:last-child {
+  top: 100%;
+  left: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+    /* 초기 위치 */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* 최종 위치 */
+  }
+}
+
+/* 스와이퍼 버튼 커스텀 */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+}
+
+/* 공동 폰트 */
+.headtxt {
+  font-weight: 700;
+  font-family: "Playfair", serif;
+  font-size: 5rem;
+  color: white;
+}
+
+.subtxt {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1.875rem;
+  margin: 36px 0;
+  color: white;
+}
+
+.menutxt {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.header .right-menu {
+  font-weight: 700;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.banner .mb-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #222;
+  z-index: 9999;
+  padding: 70px 16px;
+  color: white;
+  display: none;
+}
+.banner .mb-menu.go{
+  display: block;
+}
+.banner .mb-menu-top .top{
+  margin-top: -8px;
+}
+.banner .mb-menu-top li{
+  font-weight: 700;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  margin-top: 8px;
+  font-size: 1.5rem;
+}
+.banner .mb-menu .bottom-menu{
+  display: flex;
+}
+.banner .mb-menu .bottom-menu p{
+  margin-right: 8px;
+  margin-top: 4px;
+  margin-bottom: 36px;
+}
+.banner .mb-menu-top{
+  margin-bottom: 32px;
+}
+
+
+/* banner 시작 */
+.banner .banner-background1 {
+  background-image: url(../images/banner1.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 160px;
+  flex-direction: column;
+
+}
+
+.banner .banner-background2 {
+  background-image: url(../images/banner2.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  padding: 0 160px;
+  flex-direction: column;
+}
+
+.banner .banner-background3 {
+  background-image: url(../images/banner3.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 160px;
+  flex-direction: column;
+}
+
+.banner .banner-background4 {
+  background-image: url(../images/banner4.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 160px;
+  flex-direction: column;
+}
+
+/* sub-menu-box */
+.sub-menu-box {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  background-color: white;
+  z-index: 999;
+  display: none;
+}
+
+.sub-menu-box.on {
+  display: block;
+}
+
+.sub-menu-box .container {
+  padding: 100px 125px;
+  height: 100%;
+}
+
+.sub-menu-box .sub-menu {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: baseline;
+  height: 100%;
+}
+
+.sub-menu-box .sub-menu li {
+  margin-right: 28px;
+
+}
+
+.sub-menu-box .sub-menu li a {
+  margin-bottom: 17px;
+}
+
+/* header */
+.header.active {
+  background-color: transparent;
+
+}
+
+.header .right-menu.active {
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: white;
+  padding: 0 160px;
+}
+
+.header .right-menu {
+  display: flex;
+  color: #222;
+
+}
+
+.header .right-menu li {
+  margin-left: 60px;
+}
+
+.banner .main-logo {
+  width: 240px;
+  height: 17px;
+}
+
+/* banner 끝 */
+/* section1 시작 */
+.sec-1 .container {
+  background-image: url(../images/section1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 160px;
+  background-attachment: fixed;
+}
+
+.sec-1 .sec-1_menutxt {
+  display: flex;
+}
+
+.sec-1 .sec-1_menutxt p {
+  margin-right: 24px;
+}
+
+/* section1 끝 */
+/* section2 시작 */
+.sec-2 .container {
+  background-image: url(../images/section2.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 160px;
+  background-attachment: fixed;
+
+}
+
+.sec-2 .sec2-mbox {
+  display: flex;
+}
+
+.sec-2 .middle {
+  margin-bottom: 8px;
+}
+
+.sec-2 .sec2-mbox p {
+  margin-right: 24px;
+}
+
+/* section2 끝 */
+/* section3 시작 */
+.sec-3 .container {
+  background-image: url(../images/section3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 160px;
+  justify-content: flex-end;
+  background-attachment: fixed;
+}
+
+.sec-3 .sec-3-top {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.sec-3 .sec-3-top p {
+  margin-right: 24px;
+}
+
+.sec-3 .sec-3-bottom {
+  display: flex;
+}
+
+.sec-3 .sec-3-bottom p {
+  margin-right: 24px;
+}
+
+/* section3 끝 */
+/* section4시작 */
+.sec-4 .container {
+  background-image: url(../images/section4.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 160px;
+  background-attachment: fixed;
+}
+
+.sec-4 .sec-4-txtbox {
+  display: flex;
+}
+
+.sec-4 .sec-4-h1 {
+  width: 100%;
+
+}
+
+.sec-4 .sec-4-txtbox p {
+  margin-right: 24px;
+}
+
+.sec-4 .sec4-wrap-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.sec-4 .swiper-wrapper {
+  width: 500px;
+  height: 500px;
+
+}
+
+/* sectio5 */
+.sec-5 {
+  width: auto;
+}
+.sec-5 .container {
+  background-image: url(../images/highlights_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 160px;
+  height: 100%;
+  background-attachment: fixed;
+
+}
+.sec-5 .sec-5-left-box {
+  width: 523px;
+}
+
+
+.sec-5 .sec-5-right-box {
+  width: calc(100% - 523px);
+}
+
+.sec-5 .sec-5-right-box .inner-box {
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.sec-5 .inner-txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 45px;
+  color: white;
+  font-size: 1.875rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+
+
+/* footer */
+.footer .container {
+  height: auto;
+  padding: 54px 160px;
+}
+
+.footer h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+
+  margin-bottom: 8px;
+}
+
+.footer .footer-menu {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #A8A8A8;
+  display: flex;
+  border-bottom: 1px solid #A8A8A8;
+  padding: 18px 0;
+
+}
+
+.footer .main-logo {
+  width: 240px;
+  height: 17px;
+  margin-top: 67px;
+}
+
+.footer .footer-menu p {
+  margin-right: 24px;
+}
+
+.footer .footer-bottom-txt {
+  margin: 24px 0;
+  display: flex;
+}
+
+.footer .footer-bottom-txt p {
+  margin-right: 24px;
+}
+.footer .footer-txt-color{
+  color: #A8A8A8;
+}
+
+/* --------------------------------반응형------------------- */
+@media (max-width: 1800px) {
+
+  .fp-section,
+  .fp-slide,
+  .fp-tableCell {
+    height: auto !important;
+  }
+
+  .sec-5 .container {
+    padding: 160px 0;
+    padding-left: 160px;
+
+  }
+
+
+
+}
+@media (max-width: 1400px){
+  .header{
+    padding: 0 16px;
+  }
+  .banner .main-logo{
+    display: none;
+  }
+  #hamburger{
+    display: block;
+  }
+  
+}
+
+@media (max-width: 1000px) {
+  .header{
+    height: 50px;
+  }
+  
+
+  .mySwiper1 .swiper-button-next,
+  .mySwiper1 .swiper-button-prev {
+    display: none;
+  }
+  /* 공용 텍스트 */
+  .subtxt{
+    margin: 18px 0;
+    font-size: 1rem;
+  }
+  .headtxt{
+    font-size: 3rem;
+  }
+  .menu-txt p{
+    display: none;
+  }
+  .header .right-menu{
+    display: none;
+  }
+  .sec-5 .sec-5-right-box {
+    width: 100%;
+  }
+  .sec-1 .container,
+  .sec-2 .container,
+  .sec-3 .container,
+  .sec-4 .container
+  
+  {
+    padding: 0 60px;
+  }
+  .banner .banner-background1,
+  .banner .banner-background2,
+  .banner .banner-background3,
+  .banner .banner-background4{
+    padding: 0 60px;
+  }
+  
+
+  .sec-3 .container{
+    background-position: left bottom; 
+    align-items: end;
+    justify-content: left;
+    padding-bottom: 150px;
+    padding-left: 60px;
+  }
+  .sec-4 .sec4-right-box{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .sec-4 .sec4-wrap-box{
+    flex-direction: column;
+  }
+  .sec-4 .sec4-left-box
+  {
+    text-align: center;
+  }
+  .sec-4 .sec-4-txtbox{
+    display: flex;
+    justify-content: center;
+  }
+  .sec-5 .container{
+    flex-direction: column;
+    padding: 60px;
+  }
+  
+  
+  .sec-5 .sec-5-left-box{
+    text-align: center;
+  }
+  .sec-5 .mySwiper2 img{
+    width: 100%;
+  }
+  .footer .footer-bottom-txt{
+    margin: 8px 0;
+  }
+  .footer .footer-menu{
+    padding: 8px 0;
+  }
+  .footer .container{
+    padding: 24px 60px;
+  }
+  .footer .main-logo{
+    margin-top: 12px;
+    width: 170px;
+
+  }
+  .footer .footer-bottom-txt{
+    flex-direction: column;
+  }
+  .footer .footer-bottom-txt p {
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+}
+@media (max-width: 760px){
+  /* 공용 텍스트 */
+  .subtxt{
+    margin: 12px 0;
+  }
+  .banner .banner-background1,
+  .banner .banner-background2,
+  .banner .banner-background3,
+  .banner .banner-background4{
+    padding: 0 16px;
+  }
+  
+  .sec-1 .container,
+  .sec-2 .container,
+  .sec-4 .container,
+  .sec-5 .container
+  
+  {
+    padding: 0 16px;
+  }
+  .sec-3 .container{
+    padding-left: 16px;
+  }
+  
+  .footer .footer-store,
+  .footer .footer-menu{
+    display: none;
+  
+  }
+  .footer .main-logo{
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .footer .footer-bottom-txt{
+    margin: 0;
+  }
+  .footer .container{
+    padding: 16px;
+  }
+  
+
+}
+@media (max-width: 550px){
+  .header{
+
+    height: 35px;
+  }
+  .banner .banner-background1,
+  .banner .banner-background2,
+  .banner .banner-background3,
+  .banner .banner-background4{
+    height: auto;
+    padding-top: 291px;
+    padding-bottom: 118px;
+  }
+  .banner .container{
+    height: auto;
+  }
+
+  .sec-1 .container{
+    height: auto;
+    padding-top: 161px;
+    padding-bottom: 261px;
+    background-attachment: scroll;
+  }
+  .sec-2 .container
+  {
+    height: auto;
+    padding-top: 56px;
+    padding-bottom: 366px;
+    background-attachment: scroll;
+  }
+  .sec-3 .container{
+    height: auto;
+    padding-bottom: 115px;
+    padding-top: 324px;
+    background-attachment: scroll;
+  }
+  .sec-4 .container{
+    height: auto;
+    padding: 56px 16px;
+    background-attachment: scroll;
+  }
+  .sec-5 .container{
+    padding: 56px 16px;
+    background-attachment: scroll;
+    height: auto;
+  }
+
+
+  .banner .mb-menu-top .top{
+    margin-top: -8px;
+  }
+  .banner .mb-menu-top li{
+    font-weight: 500;
+    border-bottom: 1px solid white;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    font-size: 0.875rem;
+  }
+  .banner .mb-menu .bottom-menu{
+    display: flex;
+  }
+  .banner .mb-store{
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+  
+  .banner .mb-menu .bottom-menu p{
+    margin-right: 8px;
+    margin-top: px;
+    margin-bottom: 36px;
+    font-size: 0.75rem;
+    font-weight: 400;
+
+  }
+  .banner .mb-menu-top{
+    margin-bottom: 32px;
+  }
+  .banner .mb-ssf{
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .banner .mb-menu{
+
+    padding-top: 66px;
+    padding-bottom: 31px;
+
+  }
+
+  
+
+
+  
+}
+@media (max-width: 376px){
+  .headtxt{
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Playfair", serif;
+  }
+  .sec-4 .subtxt,
+  .sec-5 .subtxt
+  { 
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .subtxt{
+    font-size: 0.8125rem;
+    font-weight: 400;
+  }
+  .sec-5  .sec-5-right-box .inner-box{
+    height: 350px;
+  }
+  .sec-5 .inner-box p{
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .sec-4 .swiper-wrapper {
+    width: 343px;
+    height: 300px;
+  }
+  .footer .footer-bottom-txt{
+    font-size: 0.75rem;
+  }
+  .footer .main-logo{
+    width: 120px;
+    height: 10px;
+  }
+  
+  
+
+  
+}
